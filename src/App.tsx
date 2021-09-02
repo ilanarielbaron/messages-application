@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import generateMessage, { Message } from './Api';
+import { Home } from "./components/Home";
 
 const App: React.FC<{}> = () => {
   const [messages, setMessages] = useState<Message[]>([]);
@@ -14,6 +15,7 @@ const App: React.FC<{}> = () => {
 
   return (
     <div>
+      <Home />
       {messages?.map?.(msg => <div key={msg?.message}>{msg?.message}</div>)}
     </div>
   );

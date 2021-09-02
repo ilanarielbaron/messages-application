@@ -1,12 +1,7 @@
 import random from 'lodash/random';
 import faker from 'faker';
 import { Observable } from 'rxjs';
-
-enum Priority {
-  Error,
-  Warn,
-  Info,
-}
+import { Priority } from "./Constants";
 
 export interface Message {
   message: string;
