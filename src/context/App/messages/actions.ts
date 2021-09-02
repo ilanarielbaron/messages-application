@@ -1,6 +1,6 @@
 import {
   getMessageRequest,
-} from '../../../api';
+} from '../../../api/index';
 import { GET_MESSAGE } from './type';
 
 export function getMessageAction(dispatch: any) {
