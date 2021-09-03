@@ -9,16 +9,14 @@ interface Props {
     bgColor: string
 }
 
-export const Messages = ({ priority, messages, bgColor }: Props) => {
-    return (
-        <Grid item xs>
-            <Typography variant='h4'> {Priority[priority]} Type {priority + 1}</Typography>
-            <Typography variant='body1'>Count {messages.length}</Typography>
-            {messages.map((message, index) => {
-                return (
-                    <Item key={index} bgColor={bgColor} message={message} arrayIndex={index} />
-                )
-            })}
-        </Grid>
-    )
-}
+export const Messages = ({ priority, messages, bgColor }: Props) => (
+    <Grid item xs>
+        <Typography variant='h4'> {Priority[priority]} Type {priority + 1}</Typography>
+        <Typography variant='body1'>Count {messages.length}</Typography>
+        {messages.map((message, index) => {
+            return (
+                <Item key={index} bgColor={bgColor} message={message} arrayIndex={index} />
+            )
+        })}
+    </Grid>
+)

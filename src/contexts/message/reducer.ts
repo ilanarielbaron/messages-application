@@ -64,4 +64,4 @@ export const reducer = (state: IMessageState = initialState, action: AppAction) 
         default:
             return state;
     }
-};
+}

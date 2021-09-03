@@ -12,6 +12,7 @@ const observable = new Observable<IMessage>(subscriber => {
     subscriber.next({ message, priority });
     setTimeout(generate, nextInMS);
   };
+
   generate();
 });
 
@@ -19,6 +20,7 @@ const subscribe = (callback: (message: IMessage) => void) => {
   const subscription = observable.subscribe({
     next: callback,
   });
+
   return () => subscription.unsubscribe();
 };
 

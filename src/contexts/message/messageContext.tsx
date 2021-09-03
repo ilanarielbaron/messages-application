@@ -8,6 +8,6 @@ const MessageContext = React.createContext<IMessageContext>({
     warningMessages: initialState.warningMessages,
     infoMessages: initialState.infoMessages,
     isSubscribed: initialState.isSubscribed
-});
+})
 
 export default MessageContext

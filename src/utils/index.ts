@@ -1,4 +1,4 @@
-import { Priority } from "../utils/constants";
+import { Priority } from "./constants";
 
 export const getBgColor = (priority: Priority) => {
     let bgColor = '#F56236'
@@ -14,4 +14,3 @@ export const getBgColor = (priority: Priority) => {
 
     return bgColor
 }
-
