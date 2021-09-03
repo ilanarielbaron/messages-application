@@ -1,7 +1,7 @@
 import random from 'lodash/random';
 import faker from 'faker';
 import { Observable } from 'rxjs';
-import { Priority } from "./Constants";
+import { Priority } from "./utils/constants";
 import { IMessage } from './type';
 
 const observable = new Observable<IMessage>(subscriber => {

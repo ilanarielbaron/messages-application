@@ -1,25 +1,15 @@
 import { Grid, Typography } from "@material-ui/core";
 import { Item } from "./Item";
-import { Priority } from "../../../Constants";
+import { Priority } from "../../../utils/constants";
 import { IMessage } from "../../../type";
 
 interface Props {
     priority: Priority
     messages: IMessage[]
+    bgColor: string
 }
 
-export const Messages = ({ priority, messages }: Props) => {
-    let bgColor = '#F56236'
-
-    switch (priority) {
-        case Priority.Info:
-            bgColor = '#88FCA3'
-            break
-        case Priority.Warning:
-            bgColor = '#FCE788'
-            break
-    }
-
+export const Messages = ({ priority, messages, bgColor }: Props) => {
     return (
         <Grid item xs>
             <Typography variant='h4'> {Priority[priority]} Type {priority + 1}</Typography>

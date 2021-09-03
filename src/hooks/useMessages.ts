@@ -2,7 +2,7 @@ import { useCallback } from "react";
 import { IMessage } from "../type";
 import useMessageContext from "./useMessageContext"
 import { types } from "../contexts/message/types";
-import { Priority } from "../Constants";
+import { Priority } from "../utils/constants";
 
 export const useMessages = () => {
     const { dispatch, errorMessages, warningMessages, infoMessages, isSubscribed } = useMessageContext();
