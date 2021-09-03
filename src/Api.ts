@@ -2,13 +2,9 @@ import random from 'lodash/random';
 import faker from 'faker';
 import { Observable } from 'rxjs';
 import { Priority } from "./Constants";
+import { IMessage } from './type';
 
-export interface Message {
-  message: string;
-  priority: Priority;
-}
-
-const observable = new Observable<Message>(subscriber => {
+const observable = new Observable<IMessage>(subscriber => {
   const generate = () => {
     const message = faker.lorem.sentence();
     const priority = random(0, 2) as Priority;
@@ -19,7 +15,7 @@ const observable = new Observable<Message>(subscriber => {
   generate();
 });
 
-const subscribe = (callback: (message: Message) => void) => {
+const subscribe = (callback: (message: IMessage) => void) => {
   const subscription = observable.subscribe({
     next: callback,
   });

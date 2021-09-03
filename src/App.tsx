@@ -1,23 +1,27 @@
-import React, { useState } from 'react';
-import { useEffect } from 'react';
-import generateMessage, { Message } from './Api';
+import React, { useEffect } from 'react';
+import generateMessage from './Api';
 import { Home } from "./components/Home";
+import { useMessages } from './hooks/useMessages';
+import { IMessage } from './type';
+
+let cleanUp = () => { }
 
 const App: React.FC<{}> = () => {
-  const [messages, setMessages] = useState<Message[]>([]);
+  const { addNewMessage, isSubscribed } = useMessages();
 
   useEffect(() => {
-    const cleanUp = generateMessage((message: Message) => {
-      setMessages(oldMessages => [...oldMessages, message]);
-    });
+    if (isSubscribed) {
+      cleanUp = generateMessage((message: IMessage) => {
+        addNewMessage(message)
+      });
+    } else {
+      cleanUp();
+    }
     return cleanUp;
-  }, [setMessages]);
+  }, [addNewMessage, isSubscribed]);
 
   return (
-    <div>
-      <Home />
-      {messages?.map?.(msg => <div key={msg?.message}>{msg?.message}</div>)}
-    </div>
+    <Home />
   );
 }
 

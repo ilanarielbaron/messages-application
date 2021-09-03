@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import AppDataProvider from './context/App/AppDataProvider';
+import MessageContextProvider from './contexts/message/provider';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppDataProvider>
+    <MessageContextProvider>
       <App />
-    </AppDataProvider>
+    </MessageContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
