@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
     display: flex;
     justify-content: center;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 
     button {
         margin: 3px;
