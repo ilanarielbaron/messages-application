@@ -40,6 +40,6 @@ it('renders stop button correctly', () => {
     </MessageContext.Provider>
   )
 
-  const startButton = getByText("Stop");
-  expect(startButton).toBeInTheDocument();
+  const stopButton = getByText("Stop");
+  expect(stopButton).toBeInTheDocument();
 });

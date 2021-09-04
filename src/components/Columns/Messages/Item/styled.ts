@@ -14,6 +14,7 @@ export const Wrapper = styled.div`
     > p {
         width: 80%;
         overflow: auto;
+        max-height: 80px;
     }
 `
 

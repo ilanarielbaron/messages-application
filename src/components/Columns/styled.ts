@@ -6,5 +6,11 @@ export const Wrapper = styled.div`
 
     h4 {
         font-weight: bold;
+        white-space: nowrap;
+        overflow: auto;
+    }
+
+    > div .MuiGrid-item {
+        min-width: 250px;
     }
 `

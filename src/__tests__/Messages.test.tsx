@@ -5,7 +5,6 @@ import MessageContext from '../contexts/message/messageContext';
 import { IMessage } from '../type';
 import { Priority } from '../utils/constants';
 
-
 afterEach(cleanup);
 
 const twoErrorMessages: IMessage[] = [
