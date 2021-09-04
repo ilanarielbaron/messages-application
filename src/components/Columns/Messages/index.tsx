@@ -1,7 +1,7 @@
 import { Grid, Typography } from "@material-ui/core";
 import { Item } from "./Item";
-import { Priority } from "../../../utils/constants";
 import { IMessage } from "../../../type";
+import { Priority } from "../../../utils/constants";
 
 interface Props {
     priority: Priority

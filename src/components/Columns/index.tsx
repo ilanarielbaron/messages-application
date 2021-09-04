@@ -11,9 +11,9 @@ export const Columns = () => {
     return (
         <Wrapper>
             <Grid container spacing={3} justifyContent="center">
-                <Messages priority={Priority.Error} messages={errorMessages} bgColor={getBgColor(Priority.Error)}/>
+                <Messages priority={Priority.Error} messages={errorMessages} bgColor={getBgColor(Priority.Error)} />
                 <Messages priority={Priority.Warning} messages={warningMessages} bgColor={getBgColor(Priority.Warning)} />
-                <Messages priority={Priority.Info} messages={infoMessages} bgColor={getBgColor(Priority.Info)}/>
+                <Messages priority={Priority.Info} messages={infoMessages} bgColor={getBgColor(Priority.Info)} />
             </Grid>
         </Wrapper>
     )
