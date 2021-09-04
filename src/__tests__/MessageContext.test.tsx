@@ -39,7 +39,7 @@ test('should add an error message to an existing list', () => {
     })).toEqual(
         {
             ...initialState,
-            errorMessages: [errorMessage, newErrorMessage]
+            errorMessages: [newErrorMessage, errorMessage]
         }
     )
 })
