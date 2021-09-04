@@ -18,6 +18,7 @@ export const Wrapper = styled.div`
 `
 
 export const Clear = styled.div`
+    cursor: pointer;
     display: flex;
     width: 20%;
     justify-content: flex-end;
