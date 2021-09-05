@@ -8,6 +8,7 @@ import { getBgColor } from "../../utils";
 
 export const Columns = () => {
     const { errorMessages, infoMessages, warningMessages } = useMessages()
+
     return (
         <Wrapper>
             <Grid container spacing={3} justifyContent="center">

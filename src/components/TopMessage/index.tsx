@@ -11,7 +11,7 @@ export const TopMessage = () => {
     const [topMessage, setTopMessage] = useState<string | undefined>()
     const [open, setOpen] = useState(false)
 
-    /** Set the latest error message for 2 seconds except a new one came or the user clean all the messages */
+    /** Set the latest error message for 2 seconds except a new one came or the user clean the message */
     useEffect(() => {
         if (!errorMessages ||
             errorMessages.length === 0 ||
@@ -25,9 +25,11 @@ export const TopMessage = () => {
                 return
         }
 
-        setOpen(true)
-        lastCount = errorMessages.length
-        setTopMessage(errorMessages[0].message)
+        if(topMessage !== errorMessages[0].message) {
+            setOpen(true)
+            lastCount = errorMessages.length
+            setTopMessage(errorMessages[0].message)
+        }
         // eslint-disable-next-line
     }, [errorMessages])
 

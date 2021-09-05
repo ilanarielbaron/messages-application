@@ -3,7 +3,6 @@ import { cleanup, render } from '@testing-library/react';
 import App from '../App';
 import MessageContext from '../contexts/message/messageContext';
 
-
 afterEach(cleanup);
 
 it('renders start button correctly', () => {
@@ -40,6 +39,6 @@ it('renders stop button correctly', () => {
     </MessageContext.Provider>
   )
 
-  const stopButton = getByText("Stop");
-  expect(stopButton).toBeInTheDocument();
-});
+  const stopButton = getByText("Stop")
+  expect(stopButton).toBeInTheDocument()
+})

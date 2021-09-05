@@ -33,8 +33,8 @@ it('renders messages count correctly', () => {
         </MessageContext.Provider>
     )
 
-    const errorCounter = getByText("Count 2");
-    const emptyCounter = getAllByText("Count 0");
+    const errorCounter = getByText("Count 2")
+    const emptyCounter = getAllByText("Count 0")
     expect(errorCounter).toBeInTheDocument();
     expect(emptyCounter).toHaveLength(2)
 });
