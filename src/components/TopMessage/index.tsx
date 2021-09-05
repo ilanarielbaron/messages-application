@@ -20,7 +20,7 @@ export const TopMessage = () => {
                 setOpen(false)
                 setTimeout(() => {
                     setTopMessage(undefined)
-                }, 500)
+                }, 100)
 
                 return
         }
